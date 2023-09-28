@@ -51,7 +51,3 @@ class SentimentAnalysisService {
 
 module.exports = SentimentAnalysisService;
 
-/*const result = new SentimentAnalysisService().analyzeTextCustom('overwhelmed');
-
-console.log(result);*/
-

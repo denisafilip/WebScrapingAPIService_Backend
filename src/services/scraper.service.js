@@ -95,9 +95,7 @@ class ScraperService {
             throw new Error('Invalid URL format');
         }
 
-        const response = await this.client.get(url,
-            {}
-        )
+        const response = await this.client.get(url, {})
 
         if (response.success) {
             try {
@@ -127,20 +125,4 @@ class ScraperService {
 }
 
 module.exports = ScraperService;
-
-
-//new ScraperService().getBlogContentWordCount("https://wsa-test.vercel.app/blog/the-challenges-of-urban-living").then(r => console.log(r));
-//new ScraperService().splitConcatenatedWords("Urban Life The Challenges of Urban Living Navigating the Urban JungleLiving in a bustling city comes with its own set of challenges. The continuous hustle and bustle can sometimes be overwhelming, offering both incredible opportunities and stiff competition. Let's take a closer look at the not-so-rosy aspects of urban life.The Downsides of City LivingNoise Pollution: The constant noise from traffic and construction sites can be a source of distress.High Cost of Living: Urban areas often come with a hefty price tag, including high rents and expensive amenities.Pollution: Cities are often characterized by high levels of pollution, which can negatively affect your health and well-being.Coping Strategies for UrbanitesDespite the challenges, there are ways to cope with the stresses of city life:Creating a Quiet Sanctuary: Make your home a quiet and peaceful sanctuary away from the noise and chaos.Community Engagement: Engage with your local community to foster relationships and build support systems.Finding Green Spaces: Make an effort to find and spend time in green spaces to reconnect with nature and find moments of calm.");
-/*
-const { document } = new JSDOM(response.response.body).window;
-                console.log(document);
-                const extractedData = extractRules.map(rule => {
-                    const elements = document.getElementsByTagName(rule);
-                    const elementsArray = Array.from(elements);
-                    return elementsArray
-                        .filter(element => element.textContent.trim() !== '')
-                        .map(element => element.textContent);
-                });
-                console.log(extractedData);
- */
 
